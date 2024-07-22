@@ -6,6 +6,14 @@ using { sameerahmed_1_a38 as my } from '../db/schema.cds';
 service sameerahmed_1_a38Srv
 {
     @odata.draft.enabled
+entity ProductFAQ as projection on my.ProductFAQ
+{
+        ID,
+        issue,
+        question,
+        answer
+};
+
     entity CustomerMessage as
         projection on my.CustomerMessage;
 

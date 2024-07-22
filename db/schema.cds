@@ -24,3 +24,11 @@ entity CustomerMessage
     suggestedResponseCustomerLanguage : String(2000);
     a_ServiceOrder : Association to one S4HCP_ServiceOrder_Odata.A_ServiceOrder;
 }
+entity ProductFAQ
+{
+    key ID : Integer;
+    issue : LargeString;
+    question : LargeString;
+    answer : LargeString;
+    embedding : Vector(1536);
+}
